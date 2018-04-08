@@ -6,11 +6,19 @@ services:
     ports:
       - 5431:5432
     volumes:
-      - data:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.3
+    ports:
+      - 9200:9200
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data
 
   web:
     depends_on:
       - db
+      - elasticsearch
     build: .
     ports:
       - 3000:3000
@@ -20,4 +28,5 @@ services:
       - .env
 
 volumes:
-  data:
+  db:
+  elasticsearch:
