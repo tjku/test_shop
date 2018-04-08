@@ -1,0 +1,31 @@
+AllCops:
+  Exclude:
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+  DisplayStyleGuide: true
+  UseCache: false
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.1
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/*'
+    - 'config/initializers/*'
+    - 'config/routes.rb'
+    - 'spec/**/*.rb'
+
+Metrics/LineLength:
+  Max: 120 
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/*'
