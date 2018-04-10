@@ -11,6 +11,7 @@ Metrics/AbcSize:
   Enabled: false
 
 Metrics/BlockLength:
+  Max: 30
   Exclude:
     - 'config/environments/*'
     - 'config/initializers/*'
@@ -19,6 +20,9 @@ Metrics/BlockLength:
 
 Metrics/LineLength:
   Max: 120 
+
+Metrics/MethodLength:
+  Max: 15
 
 Style/Documentation:
   Enabled: false

@@ -34,7 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'acts_as_tree'
-gem 'searchkick'
+gem 'elasticsearch-persistence'
+gem 'httparty'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

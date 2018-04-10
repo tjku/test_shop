@@ -1,0 +1,13 @@
+<table>
+  <tr>
+  <th>Id</th>
+  <th>Nazwa</th>
+  <th>Producent</th>
+  <th>Kod producenta</th>
+  <th>EAN</th>
+  <th>Cena</th>
+  </tr>
+  <%= render @products %>
+</table>
+
+<%= paginate @products %>
